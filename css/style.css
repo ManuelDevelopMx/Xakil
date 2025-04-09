@@ -1,0 +1,202 @@
+:root {
+    --verde: #7FBF1F;
+    --verde-oscuro: #A2A629;
+    --amarillo: #EFF285;
+    --naranja: #D9B166;
+    --blanco: #F2F2F2;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--blanco);
+    color: #333;
+    overflow-x: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .boton-musica {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--verde);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s;
+  }
+  
+  .boton-musica:hover {
+    background-color: var(--amarillo);
+  }
+  
+  
+  header {
+    background-color: var(--verde);
+    color: white;
+    padding: 10px 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    font-weight: bold;
+  }
+  header h1 {
+    font-size: 1.5rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .menu-icon {
+    position: absolute;
+    left: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--verde-oscuro);
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  .bottom-nav button {
+    background-color: var(--amarillo);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: black;
+    flex: 1;
+    margin: 0 5px;
+    height: 35px;
+    font-size: 18px;
+  }
+  
+  footer {
+    background-color: var(--verde-oscuro);
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+  }
+  footer a {
+    text-decoration: none;
+    background-color: var(--dorado);
+    color: black;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 5px;
+    display: inline-block;
+    background-color: var(--amarillo);
+  }
+  
+  
+  main {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  .milpa-img {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .milpa-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  #sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: var(--verde-oscuro);
+    transition: left 0.3s ease;
+    z-index: 1000;
+    padding-top: 60px;
+    border: 5px solid white;
+    border-radius: 2px;
+  }
+  .sidebar-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px auto 10px;
+    border: 4px solid var(--blanco);
+    background-color: var(--blanco);
+  }
+  
+  .sidebar-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  
+  #sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #sidebar ul li {
+    padding: 10px 20px;
+  }
+  
+  #sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+  }
+  
+  #sidebar.active {
+    left: 0;
+  }
+  
+  @media (orientation: portrait) {
+    body::before {
+      content: "Por favor, gira tu dispositivo para usar Xakil en horizontal.";
+      position: fixed;
+      background-color: var(--verde);
+      color: white;
+      padding: 20px;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      font-size: 1.2rem;
+      z-index: 2000;
+    }
+  
+    main, header, nav, footer, #sidebar {
+      display: none !important;
+    }
+  }
+  

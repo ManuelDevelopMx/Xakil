@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Xakil</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<audio id="musicaFondo" autoplay loop>
+    <source src="audio/5 Minutos Música Relajante Para Meditar. Conecta tu cuerpo y mente, encuentra paz interior, 001.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+</audio>
+  
+<body>
+
+  <header>
+    <div class="menu-icon" onclick="toggleSidebar()">☰</div>
+    <h1 style="font-size: 50px;">Xakil</h1>
+    <button id="toggleMusica" class="boton-musica">🔊</button>
+  </header>
+
+  <nav class="bottom-nav">
+    <a href="dieta.html"><button>Dieta de la milpa</button></a>
+    <a href="productos.html"><button>Productos Locales</button></a>
+    <a href="ia.html"><button>Nutriólogo Virtual (IA)</button></a>
+  </nav>
+
+  <aside id="sidebar">
+    <div class="sidebar-avatar">
+        <img src="logoxakil.png" alt="Avatar" />
+      </div>
+    <ul>
+      <li><a href="dieta.html">Dieta de la milpa</a></li>
+      <li><a href="#">Productos Locales</a></li>
+      <li><a href="#">Nutriólogo Virtual</a></li>
+      <li><a href="#">Ayuda</a></li>
+      <li><a href="#">Acerca de</a></li>
+    </ul>
+  </aside>
+
+  <main>
+    <h2>Bienvenido a Xakil</h2>
+
+    <p>
+      <strong>Xakil</strong> es una aplicación móvil multiplataforma que te ayuda a mejorar la calidad de tu salud y calidad de vida. 
+      Aquí podrás hacer una dieta basada en la <strong>dieta de la milpa</strong>, recibir atención de un <strong>nutriólogo virtual</strong> con inteligencia artificial, 
+      y encontrar <strong>productos de la dieta de la milpa</strong> a un precio accesible y cerca de ti mediante GPS. ¡¡Tenemos una dieta para cada alcadia o municipio !!
+    </p>
+  <br> </br>
+<h3>¿Te preguntarás qué es la dieta de la milpa?</h3>
+    <p>
+      La dieta de la milpa es un patrón alimenticio ancestral basado en ingredientes tradicionales como el maíz, frijol, calabaza y chile. 
+      Promueve una alimentación saludable, sostenible y rica en nutrientes esenciales.
+    </p>
+  
+    <div class="milpa-img">
+      <img src="dietadelamilpa.jpeg" alt="Plato de la dieta de la milpa">
+    </div>
+  </main>
+
+  <footer>
+    <a href="#ayuda">Ayuda</a>
+    <a href="#acerca">Acerca de</a>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
